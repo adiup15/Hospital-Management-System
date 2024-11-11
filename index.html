@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <div class="logo">
+                <h2>HMS</h2>
+            </div>
+            <ul>
+                <li data-page="dashboard"><a href="#dashboard">Dashboard</a></li>
+                <li data-page="patients"><a href="#patients">Patients</a></li>
+                <li data-page="doctors"><a href="#doctors">Doctors</a></li>
+                <li data-page="appointments"><a href="#appointments">Appointments</a></li>
+                <li data-page="pharmacy"><a href="#pharmacy">Pharmacy</a></li>
+                <li data-page="settings"><a href="#settings">Settings</a></li>
+            </ul>
+        </nav>
+        
+        <main class="main-content">
+            <header>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                </div>
+                <div class="user-profile">
+                    <span>Admin</span>
+                    <img src="https://via.placeholder.com/40" alt="Profile">
+                </div>
+            </header>
+
+            <div id="dashboard" class="page">
+                <h1>Dashboard</h1>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Total Patients</h3>
+                        <p>1,234</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Doctors</h3>
+                        <p>45</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Appointments</h3>
+                        <p>89</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Revenue</h3>
+                        <p>$12,345</p>
+                    </div>
+                </div>
+
+                <div class="recent-activity">
+                    <h2>Recent Activity</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Patient</th>
+                                <th>Doctor</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>John Doe</td>
+                                <td>Dr. Smith</td>
+                                <td>2024-01-20</td>
+                                <td><span class="status completed">Completed</span></td>
+                            </tr>
+                            <tr>
+                                <td>Jane Smith</td>
+                                <td>Dr. Johnson</td>
+                                <td>2024-01-20</td>
+                                <td><span class="status pending">Pending</span></td>
+                            </tr>
+                            <tr>
+                                <td>Mike Johnson</td>
+                                <td>Dr. Williams</td>
+                                <td>2024-01-19</td>
+                                <td><span class="status cancelled">Cancelled</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div id="patients" class="page">
+                <h1>Patients Management</h1>
+                <div class="action-bar">
+                    <button class="add-btn">Add Patient</button>
+                </div>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Gender</th>
+                            <th>Phone</th>
+                            <th>Address</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>P001</td>
+                            <td>John Doe</td>
+                            <td>45</td>
+                            <td>Male</td>
+                            <td>555-0123</td>
+                            <td>123 Main St</td>
+                            <td>
+                                <button class="edit-btn">Edit</button>
+                                <button class="delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="doctors" class="page">
+                <h1>Doctors Management</h1>
+                <div class="action-bar">
+                    <button class="add-btn">Add Doctor</button>
+                </div>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Specialization</th>
+                            <th>Experience</th>
+                            <th>Phone</th>
+                            <th>Email</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>D001</td>
+                            <td>Dr. Smith</td>
+                            <td>Cardiology</td>
+                            <td>15 years</td>
+                            <td>555-0101</td>
+                            <td>smith@hospital.com</td>
+                            <td>
+                                <button class="edit-btn">Edit</button>
+                                <button class="delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="appointments" class="page">
+                <h1>Appointments</h1>
+                <div class="action-bar">
+                    <button class="add-btn">Schedule Appointment</button>
+                </div>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Patient</th>
+                            <th>Doctor</th>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>A001</td>
+                            <td>John Doe</td>
+                            <td>Dr. Smith</td>
+                            <td>2024-01-25</td>
+                            <td>10:00 AM</td>
+                            <td><span class="status pending">Pending</span></td>
+                            <td>
+                                <button class="edit-btn">Edit</button>
+                                <button class="delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="pharmacy" class="page">
+                <h1>Pharmacy</h1>
+                <div class="action-bar">
+                    <button class="add-btn">Add Medicine</button>
+                </div>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Category</th>
+                            <th>Stock</th>
+                            <th>Price</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>M001</td>
+                            <td>Paracetamol</td>
+                            <td>Pain Relief</td>
+                            <td>500</td>
+                            <td>$5.99</td>
+                            <td>
+                                <button class="edit-btn">Edit</button>
+                                <button class="delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="settings" class="page">
+                <h1>Settings</h1>
+                <div class="settings-content">
+                    <h2>System Settings</h2>
+                    <p>Settings page content will be implemented soon.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
